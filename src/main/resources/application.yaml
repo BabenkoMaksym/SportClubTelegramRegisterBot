@@ -5,3 +5,8 @@ telegram-bot:
   botUsername: ${USERNAME}
   botToken: ${TOKEN}
   botPath: ${WEB_HOOK_PATH}
+
+  google:
+    calendar:
+      credentials:
+        path: "classpath:credentials.json"
