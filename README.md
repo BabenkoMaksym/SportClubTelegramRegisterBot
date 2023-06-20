@@ -7,10 +7,14 @@ Set up ngrok(In our case, ngrok is a web hook)
 4. Start ngrok with this command: ngrok http <PORT>. In our case, PORT is 5000.
 5. Copy provided Frowarding url.
 
-Set up telegram bot application.
+Set up telegram bot application
 1. Open Environment variables of your application (Intellij IDEA, Heroku etc.).
 2. Set these variables:
     TOKEN - the bot's token what BotFather gave you.
     USERNAME - the bot's username what you set in BotFather.
     WEB_HOOK_PATH - paste the Frowarding url.
 3. Run your application server.
+
+Set up api.telegram WebHook url
+1. Paste this in Google promp to set WebHook url: https://api.telegram.org/bot<TOKEN>/setWebhook?url=<WEB_HOOK_PATH>/
+2. To find out whether the url was set, paste this: https://api.telegram.org/bot<TOKEN>/getWebhookInfo/
