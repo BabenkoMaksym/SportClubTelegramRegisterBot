@@ -1,0 +1,7 @@
+server:
+  port: 5000
+
+telegram-bot:
+  botUsername: ${USERNAME}
+  botToken: ${TOKEN}
+  botPath: ${WEB_HOOK_PATH}
