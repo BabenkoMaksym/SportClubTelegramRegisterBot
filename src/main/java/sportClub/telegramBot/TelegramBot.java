@@ -42,15 +42,6 @@ public class TelegramBot extends TelegramWebhookBot{
 
     @Override
     public BotApiMethod<?> onWebhookUpdateReceived(Update update) {
-
-        try {
-            SendMessage sendMessage;
-            if((sendMessage = telegramFacade.update(update)) != null)
-                execute(sendMessage);
-        } catch (TelegramApiException e) {
-            log.error(e.getMessage());
-            throw new RuntimeException(e);
-        }
-        return null;
+        return telegramFacade.update(update);
     }
 }
