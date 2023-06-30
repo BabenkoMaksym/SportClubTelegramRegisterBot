@@ -1,4 +1,4 @@
-package sportClub.telegramBot.messageService;
+package sportClub.telegramBot.botapi.messageService;
 
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;

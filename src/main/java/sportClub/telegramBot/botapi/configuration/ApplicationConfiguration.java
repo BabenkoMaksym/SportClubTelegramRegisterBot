@@ -1,4 +1,4 @@
-package sportClub.telegramBot.configuration;
+package sportClub.telegramBot.botapi.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.MessageSource;
