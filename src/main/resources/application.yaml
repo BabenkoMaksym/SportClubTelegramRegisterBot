@@ -1,6 +1,8 @@
 server:
   port: 5000
 
+localeTag: en-UK
+
 telegram-bot:
   botUsername: ${USERNAME}
   botToken: ${TOKEN}

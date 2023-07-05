@@ -18,3 +18,25 @@ Set up telegram bot application
 Set up api.telegram WebHook url
 1. Paste this in Google promp to set WebHook url: https://api.telegram.org/bot<TOKEN>/setWebhook?url=<WEB_HOOK_PATH>/
 2. To find out whether the url was set, paste this: https://api.telegram.org/bot<TOKEN>/getWebhookInfo/
+
+#Code description
+* TelegramBotApplication - Configuration class, what triggers auto-configuration and component scan. Is an entry point.
+
+* BotController - Receives objects of Update class by http requests from WebHook, resend updates to TelegramBot onWebhookUpdateReceived method.
+
+* ApplicationConfiguration - Declares @Bean methods
+
+* TelegramBot - Telegram Bot configuration class. Stores token, bot username, web hook url and TelegramFacade object. Resend updates to TelegramFacade and returns received BotApiMethod<?>.
+
+* TelegramFacade - A hub class what gets messages and handles them.
+
+* BotStateContext - Stores all handlers for bot's states.
+
+* BotState - Enum of bot's states.
+
+* InputHandler - Interface for a received message. Has two abstract methods, handle() - handles message and build response message, getHandlerName - gets BotState of the handler class.
+
+* ReplyMessageService - Service that retrieves localized messages using a message source and provides methods to get messages and set the locale dynamically.
+
+#Files
+* messages_en_UK.properties - property file with messages in English.
