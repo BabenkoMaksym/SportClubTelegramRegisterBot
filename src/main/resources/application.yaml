@@ -8,7 +8,7 @@ telegram-bot:
   botToken: ${TOKEN}
   botPath: ${WEB_HOOK_PATH}
 
-  google:
-    calendar:
-      credentials:
-        path: "classpath:credentials.json"
+calendar:
+  id1: ${CALENDAR_ID_ARTIFICIAL_COVERING}
+  id2: ${CALENDAR_ID_FOOTBALL_FIELD}
+  id3: ${CALENDAR_ID_TABLE_TENNIS}
