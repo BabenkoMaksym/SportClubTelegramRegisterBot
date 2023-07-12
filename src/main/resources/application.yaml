@@ -7,3 +7,13 @@ telegram-bot:
   botUsername: ${USERNAME}
   botToken: ${TOKEN}
   botPath: ${WEB_HOOK_PATH}
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: ${SQL_URL}
+    username: ${SQL_USERNAME}
+    password: ${SQL_PASSWORD}
+    driver-class-name: org.postgresql.Driver
