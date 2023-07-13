@@ -7,3 +7,8 @@ telegram-bot:
   botUsername: ${USERNAME}
   botToken: ${TOKEN}
   botPath: ${WEB_HOOK_PATH}
+
+calendar:
+  id1: ${CALENDAR_ID_ARTIFICIAL_COVERING}
+  id2: ${CALENDAR_ID_FOOTBALL_FIELD}
+  id3: ${CALENDAR_ID_TABLE_TENNIS}
