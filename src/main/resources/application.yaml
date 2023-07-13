@@ -12,3 +12,13 @@ calendar:
   id1: ${CALENDAR_ID_ARTIFICIAL_COVERING}
   id2: ${CALENDAR_ID_FOOTBALL_FIELD}
   id3: ${CALENDAR_ID_TABLE_TENNIS}
+
+  spring:
+    jpa:
+      hibernate:
+        ddl-auto: update
+    datasource:
+      url: ${SQL_URL}
+      username: ${SQL_USERNAME}
+      password: ${SQL_PASSWORD}
+      driver-class-name: org.postgresql.Driver
