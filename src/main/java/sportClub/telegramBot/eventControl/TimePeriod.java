@@ -1,8 +1,13 @@
 package sportClub.telegramBot.eventControl;
 
+import lombok.Data;
+
 import java.util.Date;
+@Data
 
 public class TimePeriod {
-    public Date start;
-    public Date end;
+
+   private Date start;
+   private Date end;
+   private boolean occupied;
 }
