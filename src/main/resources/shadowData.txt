@@ -1,0 +1,2 @@
+TOKEN=6063382124:AAFi1gBLhq-MCUV-rHc9bOF3dYhar4ewsqA;USERNAME=SomeTestShadowBot;WEB_HOOK_PATH=https://97f7-194-44-247-223.ngrok-free.app
+https://api.telegram.org/bot6063382124:AAFi1gBLhq-MCUV-rHc9bOF3dYhar4ewsqA/setWebhook?url=https://97f7-194-44-247-223.ngrok-free.app/

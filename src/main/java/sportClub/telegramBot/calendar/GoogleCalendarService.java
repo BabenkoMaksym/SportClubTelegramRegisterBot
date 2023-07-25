@@ -31,7 +31,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Service
+//@Service
 public class GoogleCalendarService {
     private static final String APPLICATION_NAME = "Sport Club";
     private static final JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
