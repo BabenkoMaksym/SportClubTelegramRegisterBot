@@ -6,7 +6,7 @@ import java.util.Date;
 @Data
 
 public class TimePeriod {
-
+private TimePeriodName name;
    private Date start;
    private Date end;
    private boolean occupied;
