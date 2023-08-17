@@ -85,6 +85,25 @@ public class GoogleCalendarService {
         }
         return slots.toString();
     }
+    public List<Event> getEventList(String calendarId) throws IOException{
+        LocalDateTime startDateTime = LocalDateTime.now();
+        LocalDateTime endDateTime = startDateTime.plusDays(30);
+
+        DateTime start = DateTime.parseRfc3339(String.valueOf(startDateTime.atZone(ZoneId.systemDefault()).toInstant()));
+        DateTime end = DateTime.parseRfc3339(String.valueOf(endDateTime.atZone(ZoneId.systemDefault()).toInstant()));
+
+        Calendar calendar = calendars.get(calendarId);
+
+        Events events = calendar.events().list(calendarId)
+                .setTimeMin(start)
+                .setTimeMax(end)
+                .setOrderBy("startTime")
+                .setSingleEvents(true)
+                .execute();
+
+        List<Event> items = events.getItems();
+        return items;
+    }
 
     public void bookFacility(String calendarId, LocalDateTime startDateTime, LocalDateTime endDateTime) throws IOException {
         Calendar calendar = calendars.get(calendarId);
