@@ -32,7 +32,8 @@ public class TelegramFacade {
         } else if(dataCash.getCurrentBotState(message.getFrom().getId()) != null){
             return handleBotStatus(message);
         }
-
+        System.out.println(message.getText());
+        System.out.println("massage");
         return null;
     }
 

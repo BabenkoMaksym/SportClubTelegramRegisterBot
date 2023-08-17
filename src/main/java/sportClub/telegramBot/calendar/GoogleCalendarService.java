@@ -13,6 +13,7 @@ import com.google.api.client.util.DateTime;
 import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.calendar.Calendar;
 import com.google.api.services.calendar.CalendarScopes;
+import com.google.api.services.calendar.model.ConferenceData;
 import com.google.api.services.calendar.model.Event;
 import com.google.api.services.calendar.model.EventDateTime;
 import com.google.api.services.calendar.model.Events;
@@ -102,6 +103,8 @@ public class GoogleCalendarService {
                 .execute();
 
         List<Event> items = events.getItems();
+//        EventDateTime start1 = items.get(0).getStart();
+//        items.get(0).getEnd()
         return items;
     }
 

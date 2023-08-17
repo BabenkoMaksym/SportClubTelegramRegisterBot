@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 @lombok.Data
 public class WorkDay {
-    private final Data date;
+//    private final Data date;
 private HashMap periods;
 
     public WorkDay(Data date) {
