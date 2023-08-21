@@ -38,3 +38,6 @@ out/
 /logs/
 /logs/
 /tokens/
+src/main/resources/credentials.json
+tokens/StoredCredential
+logs/app.log
