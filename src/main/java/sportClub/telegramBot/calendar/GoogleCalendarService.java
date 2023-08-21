@@ -13,14 +13,16 @@ import com.google.api.client.util.DateTime;
 import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.calendar.Calendar;
 import com.google.api.services.calendar.CalendarScopes;
-import com.google.api.services.calendar.model.ConferenceData;
+
 import com.google.api.services.calendar.model.Event;
 import com.google.api.services.calendar.model.EventDateTime;
 import com.google.api.services.calendar.model.Events;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
 
+import sportClub.telegramBot.annotations.ForbiddenClass;
+
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -32,7 +34,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-//@Service
+@ForbiddenClass(reason = "не працює так як треба")
 public class GoogleCalendarService {
     private static final String APPLICATION_NAME = "Sport Club";
     private static final JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
@@ -103,8 +105,6 @@ public class GoogleCalendarService {
                 .execute();
 
         List<Event> items = events.getItems();
-//        EventDateTime start1 = items.get(0).getStart();
-//        items.get(0).getEnd()
         return items;
     }
 
